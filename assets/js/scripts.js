@@ -12,12 +12,14 @@ $(function() {
 
 /* QUESTIONS CHECKBOX && PROGRESS BAR */
 function checkboxProgress() {
-	var thisForm = $(this).parent().parent();
-	console.log(thisForm);
-	var checkbox_count = thisForm.find('input:checkbox').length;
-	var checkbox_checked_count = thisForm.find('input:checked').length;
+	var thisFieldset = $(this).parent().parent();
+	
+	var checkbox_count = thisFieldset.find('input:checkbox').length;
+	var checkbox_checked_count = thisFieldset.find('input:checked').length;
 	var progress_val = checkbox_checked_count / checkbox_count * 100;
-	var progress = thisForm.parent().find('.progress-bar');
+	
+	var progress = thisFieldset.parent().find('.progress-bar');
+	
 	progress.css('width', progress_val+'%').attr('aria-valuenow', progress_val);	
 	progress.text(parseInt(progress_val)+'%');
 

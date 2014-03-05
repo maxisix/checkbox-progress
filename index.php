@@ -10,8 +10,8 @@
 	?>
 	<main>
 		<form action="">
-			<div class="checkbox-progress">
-				<?php foreach( $content['categories'] as $c ) { ?>
+			<?php foreach( $content['categories'] as $c ) { ?>
+				<div class="checkbox-progress">
 					<fieldset>
 						<legend><?php echo $c['title']; ?></legend>
 							<?php $total = count( $c['todos'] ); $checked = 0; ?>
@@ -26,14 +26,15 @@
 								</div>
 							<?php } ?>
 					</fieldset>
-						<?php $percent = number_format( ($checked/$total)*100, 2 ); ?>
+					<?php $percent = number_format( ($checked/$total)*100, 2 ); ?>
 					<div class="progress">
 						<div class="progress-bar" style="width: <?php echo $percent .'%'; ?>;" role="progressbar" aria-valuenow="<?php echo $percent; ?>" aria-valuemin="0" aria-valuemax="100">
 							<?php echo $percent; ?>
 						</div>
 					</div>
-				<?php } ?>
-			</div>
+				</div>
+			<?php } ?>
+			
 
 			<div id="progress_total" class="progress">
 				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
