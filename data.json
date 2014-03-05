@@ -8,9 +8,13 @@
                     "value": true,
                     "info": "hello world"
                 } , {
-                    "label": "Ham",
-                    "value": true,
-                    "info": "hello world"
+                    "label": "Ham2",
+                    "value": false,
+                    "info": "hello world2"
+                } , {
+                    "label": "Ham3",
+                    "value": false,
+                    "info": "hello world3"
                 }
             ]
         } , {

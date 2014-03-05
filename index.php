@@ -8,132 +8,32 @@
 
 	<?php 
 		$json = file_get_contents( 'data.json' );
-		$decoded = json_decode( $json, true );
-var_dump( $decoded );
-		die();
+		$content = json_decode( $json, true );
 	?>
 	<main>
 		<form action="">
 			<div class="checkbox-progress">
-				<fieldset>
-					<legend>Select your pizza toppings:</legend>
-
-					<div class="checkbox-content">
-						<input id="ham" type="checkbox" name="toppings">
-						<label for="ham">Ham</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
+				<?php foreach( $content['categories'] as $c ) { ?>
+					<fieldset>
+						<legend><?php echo $c['title']; ?></legend>
+							<?php foreach( $c['todos'] as $t) { ?>
+								<div class="checkbox-content">
+									<input id="ham" type="checkbox" <?php if( $t['value'] ){ echo 'checked="check"' ; } ?> name="toppings">
+									<label for="ham"><?php echo $t['label']; ?></label>
+									<span class="checkbox-information-button">?</span>
+									<div class="checkbox-information">
+										<?php echo $t['info']; ?>
+									</div>
+								</div>
+							<?php } ?>
+					</fieldset>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0%
 						</div>
 					</div>
-
-					<div class="checkbox-content">
-						<input id="pepperoni" type="checkbox" name="toppings">
-						<label for="pepperoni">Pepperoni</label> 
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-
-					<div class="checkbox-content">
-						<input id="mushrooms" type="checkbox" name="toppings">
-						<label for="mushrooms">Mushrooms</label> 
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-				</fieldset>
-
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-						0%
-					</div>
-				</div>
+				<?php } ?>
 			</div>
-
-			<div class="checkbox-progress">
-				<fieldset>
-					<legend>Select your pizza toppings:</legend>
-
-					<div class="checkbox-content">
-						<input id="hama" type="checkbox" name="toppings">
-						<label for="hama">Ham</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-
-					<div class="checkbox-content">
-						<input id="pepperonia" type="checkbox" name="toppings">
-						<label for="pepperonia">Pepperoni</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-
-					<div class="checkbox-content">
-						<input id="mushroomsa" type="checkbox" name="toppings">
-						<label for="mushroomsa">Mushrooms</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-
-				</fieldset>
-
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-						0%
-					</div>
-				</div>
-			</div>
-
-
-			<div class="checkbox-progress">
-				<fieldset>
-					<legend>Select your pizza toppings:</legend>
-
-					<div class="checkbox-content">
-						<input id="hamb" type="checkbox" name="toppings">
-						<label for="hamb">Ham</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-
-					<div class="checkbox-content">
-						<input id="pepperonib" type="checkbox" name="toppings">
-						<label for="pepperonib">Pepperoni</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-
-					<div class="checkbox-content">
-						<input id="mushroomsb" type="checkbox" name="toppings">
-						<label for="mushroomsb">Mushrooms</label>
-						<span class="checkbox-information-button">?</span>
-						<div class="checkbox-information">
-							hello world
-						</div>
-					</div>
-				</fieldset>
-
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-						0%
-					</div>
-				</div>
-			</div>
-
-			<br>
 
 			<div id="progress_total" class="progress">
 				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
