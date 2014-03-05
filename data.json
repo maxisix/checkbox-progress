@@ -1,0 +1,31 @@
+{
+    "categories": [
+        {
+            "title": "Select your pizza toppings:",
+            "todos": [
+                {
+                    "label": "Ham",
+                    "value": true,
+                    "info": "hello world",
+                } , {
+                    "label": "Ham",
+                    "value": true,
+                    "info": "hello world",
+                }
+            ]
+        } , {
+            "title": "Select your pizza toppings:",
+            "todos": [
+                {
+                    "label": "Ham",
+                    "value": true,
+                    "info": "hello world",
+                } , {
+                    "label": "Ham",
+                    "value": false,
+                    "info": "hello world",
+                }
+            ]
+        }
+    ]
+}

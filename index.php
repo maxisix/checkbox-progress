@@ -4,6 +4,14 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
+
+
+	<?php 
+		$json = file_get_contents( 'data.json' );
+		$decoded = json_decode( $json, true );
+var_dump( $decoded );
+		die();
+	?>
 	<main>
 		<form action="">
 			<div class="checkbox-progress">
