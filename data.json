@@ -4,7 +4,7 @@
             "title": "Select your pizza toppings:",
             "todos": [
                 {
-                    "label": "Ham",
+                    "label": "Ham1",
                     "value": true,
                     "info": "hello world"
                 } , {
@@ -21,11 +21,11 @@
             "title": "Select your pizza toppings:",
             "todos": [
                 {
-                    "label": "Ham",
+                    "label": "Ham4",
                     "value": true,
                     "info": "hello world"
                 } , {
-                    "label": "Ham",
+                    "label": "Ham5",
                     "value": false,
                     "info": "hello world"
                 }
