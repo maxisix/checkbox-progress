@@ -6,11 +6,11 @@
                 {
                     "label": "Ham",
                     "value": true,
-                    "info": "hello world",
+                    "info": "hello world"
                 } , {
                     "label": "Ham",
                     "value": true,
-                    "info": "hello world",
+                    "info": "hello world"
                 }
             ]
         } , {
@@ -19,11 +19,11 @@
                 {
                     "label": "Ham",
                     "value": true,
-                    "info": "hello world",
+                    "info": "hello world"
                 } , {
                     "label": "Ham",
                     "value": false,
-                    "info": "hello world",
+                    "info": "hello world"
                 }
             ]
         }
